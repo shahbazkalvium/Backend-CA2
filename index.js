@@ -20,10 +20,10 @@ app.post('/user', (req, res) => {
         {username:"bob",age:30,email:"bob@example.com"},
         {username:"charlie",age:35,email:"charlie@example.com"},
     ];
-   const{username,age,email} = req.body;
-   if(!username){
-       res.status(400).send({"Message":"User not found"});
-   }
+  const { username, age, email } = req.body;
+  if(!username){
+    res.status(400).send({"Message":"User not found"});
+}
    if(!username || !age || !email){
        res.status(400).send("User parameter cannot be empty");
    }
